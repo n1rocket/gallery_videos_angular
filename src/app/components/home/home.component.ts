@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Video } from 'src/app/shared/models/video.model';
+import { Challenge } from 'src/app/shared/models/challenge.model';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -13,9 +13,10 @@ export class HomeComponent implements OnInit {
   lock:boolean = true;
   generalCode:string = "P3l1gr0"
 
-  items: Video[] = [new Video('gTOkc0qROdY', "Anécdota: Recuerdas aquel día que pasamos juntas tomando unas cervezas en aquel lugar donde terminamos besando a un calvo, qué buenos ratos!. (Laura)", "Laura",false,this.success),
-  new Video('K6ECvWkh2K8', "Recuerdo: Desde niños siempre hemos estado juntos, no había foto mía sin que aparecieses haciendo la gansa. Te quiero! (Hector)", "Hector",false,this.success),
-  new Video('7Ys5KapHuRk', "Vacaciones: Un día cojiste un avión,al llegar todo era agua, te recojí en el coche y disfrutamos de un maravilloso lugar y comida, con más TIEMPO del que tenías en Madrid. (Miguel)", "Miguel",false,this.success),
+  items: Challenge[] = [new Challenge(Challenge.REMEMBER,'gTOkc0qROdY', "Anécdota: Recuerdas aquel día que pasamos juntas tomando unas cervezas en aquel lugar donde terminamos besando a un calvo, qué buenos ratos!. (Laura)", "Laura",false,this.success),
+  new Challenge(Challenge.REMEMBER, 'K6ECvWkh2K8', "Recuerdo: Desde niños siempre hemos estado juntos, no había foto mía sin que aparecieses haciendo la gansa. Te quiero! (Hector)", "Hector",false,this.success),
+  new Challenge(Challenge.REMEMBER, '7Ys5KapHuRk', "Vacaciones: Un día cojiste un avión,al llegar todo era agua, te recojí en el coche y disfrutamos de un maravilloso lugar y comida, con más TIEMPO del que tenías en Madrid. (Miguel)", "Miguel",false,this.success),
+  new Challenge(Challenge.HUMOR, '7Ys5KapHuRk', "- ¿Tienes WiFi?  + Sí - ¿Y cuál es la clave? + Tener dinero y pagarlo.", "Miguel",false,this.success),
 ];
 
   constructor() {}

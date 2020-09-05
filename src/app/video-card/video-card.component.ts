@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Video } from '../shared/models/video.model';
+import { Challenge } from '../shared/models/challenge.model';
 import {NgForm} from '@angular/forms';
 
 
@@ -14,11 +14,11 @@ export class VideoCardComponent implements OnInit {
 
 
   @Input()
-  video: Video = new Video('','','',false, false);
+  video: Challenge = new Challenge('','','','',false, false);
 
 
   ngOnInit(): void {
-    console.log("VideoCardComponent - video: " + this.video.id);
+    console.log("VideoCardComponent - video: " + this.video.youtubeId);
   }
 
   onSubmit(form: NgForm) {

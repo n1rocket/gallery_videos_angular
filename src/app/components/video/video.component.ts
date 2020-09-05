@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Video } from 'src/app/shared/models/video.model';
+import { Challenge } from 'src/app/shared/models/challenge.model';
 
 @Component({
   selector: 'app-video',
@@ -8,12 +8,12 @@ import { Video } from 'src/app/shared/models/video.model';
 })
 export class VideoComponent implements OnInit {
   @Input()
-  video: Video;
+  video: Challenge;
 
   constructor() {}
 
   ngOnInit(): void {
-    console.log("VideoComponent - id: " + this.video.id);
+    console.log("VideoComponent - id: " + this.video.youtubeId);
 
     const tag = document.createElement('script');
 
