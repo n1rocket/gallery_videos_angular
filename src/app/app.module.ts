@@ -8,6 +8,7 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
 import { VideoComponent } from './components/video/video.component';
 import { HomeComponent } from './components/home/home.component';
 import { VideoCardComponent } from './video-card/video-card.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, VideoComponent, VideoCardComponent],
@@ -16,6 +17,7 @@ import { VideoCardComponent } from './video-card/video-card.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     YouTubePlayerModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,5 @@
+div i.fa { display: none; }
+div img { display: block; }
+
+div.show-icon i.fa { display: inline-block; }
+div.show-icon img { display: none; }
