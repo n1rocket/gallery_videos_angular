@@ -13,12 +13,9 @@ export class HomeComponent implements OnInit {
   lock:boolean = true;
   generalCode:string = "P3l1gr0"
 
-  items: Video[] = [new Video('27vpe-H9YRU', "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Respuesta Laura", "Laura",false,this.success),
-  new Video('K6ECvWkh2K8', "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Respuesta Aída", "Aída",false,this.success),
-  new Video('7Ys5KapHuRk', "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Respuesta Marina", "Marina",false,this.success),
-  new Video('K9XPNSFyqXE', "It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures. Respuesta Hector", "Hector",false,this.success),
-  new Video('7Ys5KapHuRk', "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Respuesta Marina", "Marina",false,this.success),
-  new Video('K9XPNSFyqXE', "It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures. Respuesta Hector", "Hector",false,this.success),
+  items: Video[] = [new Video('gTOkc0qROdY', "Anécdota: Recuerdas aquel día que pasamos juntas tomando unas cervezas en aquel lugar donde terminamos besando a un calvo, qué buenos ratos!. (Laura)", "Laura",false,this.success),
+  new Video('K6ECvWkh2K8', "Recuerdo: Desde niños siempre hemos estado juntos, no había foto mía sin que aparecieses haciendo la gansa. Te quiero! (Hector)", "Hector",false,this.success),
+  new Video('7Ys5KapHuRk', "Vacaciones: Un día cojiste un avión,al llegar todo era agua, te recojí en el coche y disfrutamos de un maravilloso lugar y comida, con más TIEMPO del que tenías en Madrid. (Miguel)", "Miguel",false,this.success),
 ];
 
   constructor() {}
