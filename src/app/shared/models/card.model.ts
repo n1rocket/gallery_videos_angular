@@ -9,7 +9,7 @@ export class Card {
   static TYPE_PHOTO: string = 'PHOTO';
   static TYPE_CHALLENGE_VIDEO: string = 'CHALLENGE_VIDEO';
 
-  static TAG_QUIEN: string = '¿Quién soy?';
+  static TAG_RETO: string = 'RETO';
   static TAG_RECUERDO: string = 'RECUERDO';
   static TAG_HUMOR: string = 'HUMOR';
   static TAG_ANECDOTA: string = 'ANÉCDOTA';
