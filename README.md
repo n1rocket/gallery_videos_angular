@@ -1,3 +1,6 @@
+# Deploy
+Run `ng deploy --base-href=/gallery_videos_angular/`
+
 # Videoweb
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
