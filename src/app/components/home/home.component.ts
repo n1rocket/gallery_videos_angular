@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Challenge } from 'src/app/shared/models/challenge.model';
 import { NgForm } from '@angular/forms';
 import { Card } from 'src/app/shared/models/card.model';
+import { Photo } from 'src/app/shared/models/photo.model';
 
 @Component({
   selector: 'app-home',
@@ -20,6 +21,7 @@ export class HomeComponent implements OnInit {
     new Card(Card.REMEMBER, new Challenge('K6ECvWkh2K8', "Recuerdo: Desde niños siempre hemos estado juntos, no había foto mía sin que aparecieses haciendo la gansa. Te quiero! (Hector)", "Hector",false,this.success)),
     new Card(Card.REMEMBER, new Challenge('7Ys5KapHuRk', "Vacaciones: Un día cojiste un avión,al llegar todo era agua, te recojí en el coche y disfrutamos de un maravilloso lugar y comida, con más TIEMPO del que tenías en Madrid. (Miguel)", "Miguel",false,this.success)),
     new Card(Card.HUMOR, new Challenge('7Ys5KapHuRk', "- ¿Tienes WiFi?  + Sí - ¿Y cuál es la clave? + Tener dinero y pagarlo.", "Miguel",false,this.success)),
+    new Card(Card.PHOTO, new Photo("assets/images/photo1eva.jpg", "Julio Pérez de Castro")),
 ];
 
   constructor() {}

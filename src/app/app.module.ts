@@ -10,9 +10,10 @@ import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { CardComponent } from './components/card/card.component';
 import { VideoCardComponent } from './components/video-card/video-card.component';
+import { PhotoCardComponent } from './components/photo-card/photo-card.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, VideoComponent, VideoCardComponent, CardComponent],
+  declarations: [AppComponent, HomeComponent, VideoComponent, VideoCardComponent, CardComponent, PhotoCardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
