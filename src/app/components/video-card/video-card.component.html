@@ -1,51 +1,10 @@
-  <div class="container item" [hidden]="video.success">
-    <div class="row justify-content-md-center p-4 bg-dark text-white">
-      <div class="col-md-auto">
-        <div class="row text-center inline-block">
-          <div class="col-md-4">
-            <i class="icon fa fa-5x fa-lock" aria-hidden="true"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+<div class="item">
   <app-video
-    [hidden]="!video.success"
-    [video]="video"
-    class="embed-responsive embed-responsive-16by9"
-  ></app-video>
+  [youtube_id]="video.youtube_id"
+  class="embed-responsive embed-responsive-16by9"
+></app-video>
+</div>
 
-  <div class="card-body">
-    <p class="card-text">{{ video.description }}</p>
-
-    <b>¿Quién soy?</b>
-    <p></p>
-
-    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
-      <div class="mb-2">
-        <input
-          class="form-control input-sm"
-          type="text"
-          name="name"
-          placeholder="Nombre"
-          ngModel
-        />
-        <div *ngIf="video.error" class="alert alert-danger">
-          Vaya, te has equivocado.
-        </div>
-        <div *ngIf="video.success" class="alert alert-success">
-          ¡Eso es, soy {{ video.answer }}!
-        </div>
-      </div>
-
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="btn-group">
-          <button type="submit" class="btn btn-sm btn-outline-secondary">
-            Desbloquear
-          </button>
-        </div>
-        <small class="text-muted">Consigue mi vídeo si aciertas</small>
-      </div>
-    </form>
-  </div>
+<div class="card-body">
+  <p class="card-text"><b>Enviado por:</b> {{video.sended_by}}</p>
+</div>

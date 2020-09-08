@@ -9,11 +9,12 @@ import { VideoComponent } from './components/video/video.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { CardComponent } from './components/card/card.component';
-import { VideoCardComponent } from './components/video-card/video-card.component';
+import { VideoChallengeComponent } from './components/video-challenge/video-challenge.component';
 import { PhotoCardComponent } from './components/photo-card/photo-card.component';
+import { VideoCardComponent } from './components/video-card/video-card.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, VideoComponent, VideoCardComponent, CardComponent, PhotoCardComponent],
+  declarations: [AppComponent, HomeComponent, VideoComponent, VideoChallengeComponent, CardComponent, PhotoCardComponent, VideoCardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

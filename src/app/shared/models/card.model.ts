@@ -4,6 +4,7 @@ export class Card {
 
   public classReference = Card;
 
+  static VIDEO: string = 'VIDEO';
   static PHOTO: string = 'FOTO';
   static REMEMBER: string = 'ANÉCDOTA';
   static HUMOR: string = 'HUMOR';

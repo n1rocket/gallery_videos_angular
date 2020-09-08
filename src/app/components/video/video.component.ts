@@ -8,15 +8,12 @@ import { Challenge } from 'src/app/shared/models/challenge.model';
 })
 export class VideoComponent implements OnInit {
   @Input()
-  video: Challenge;
+  youtube_id: String;
 
   constructor() {}
 
   ngOnInit(): void {
-    console.log("VideoComponent - id: " + this.video.youtubeId);
-
     const tag = document.createElement('script');
-
     tag.src = 'https://www.youtube.com/iframe_api';
     document.body.appendChild(tag);
   }

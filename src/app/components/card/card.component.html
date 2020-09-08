@@ -1,8 +1,9 @@
 <div class="card mb-4 box-shadow">
   <span [ngSwitch]="card.type">
-    <p *ngSwitchCase="card.classReference.REMEMBER"><app-video-card [video]="card.data"></app-video-card></p>
-    <p *ngSwitchCase="card.classReference.HUMOR"><app-video-card [video]="card.data"></app-video-card></p>
+    <p *ngSwitchCase="card.classReference.REMEMBER"><app-video-challenge [video]="card.data"></app-video-challenge></p>
+    <p *ngSwitchCase="card.classReference.HUMOR"><app-video-challenge [video]="card.data"></app-video-challenge></p>
     <p *ngSwitchCase="card.classReference.PHOTO"><app-photo-card [photo]="card.data"></app-photo-card></p>
+    <p *ngSwitchCase="card.classReference.VIDEO"><app-video-card [video]="card.data"></app-video-card></p>
     <p *ngSwitchDefault></p>
   </span>
 
@@ -10,7 +11,9 @@
   <span class="badge badge-pill notify-badge" [ngClass]="
   {'badge-primary': card.type === card.classReference.REMEMBER,
    'badge-info':card.type === card.classReference.HUMOR ,
-   'badge-secondary':card.type === card.classReference.PHOTO }" >{{
+   'badge-secondary':card.type === card.classReference.PHOTO ,
+   'badge-light':card.type === card.classReference.VIDEO
+   }" >{{
     card.type
   }}</span>
 </div>
