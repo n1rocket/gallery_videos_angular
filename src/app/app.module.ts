@@ -7,11 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { VideoComponent } from './components/video/video.component';
 import { HomeComponent } from './components/home/home.component';
-import { VideoCardComponent } from './video-card/video-card.component';
 import { FormsModule } from '@angular/forms';
+import { CardComponent } from './components/card/card.component';
+import { VideoCardComponent } from './components/video-card/video-card.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, VideoComponent, VideoCardComponent],
+  declarations: [AppComponent, HomeComponent, VideoComponent, VideoCardComponent, CardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

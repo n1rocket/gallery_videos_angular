@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Challenge } from '../shared/models/challenge.model';
 import {NgForm} from '@angular/forms';
+import { Challenge } from 'src/app/shared/models/challenge.model';
 
 
 @Component({
