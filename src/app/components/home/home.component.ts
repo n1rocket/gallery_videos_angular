@@ -25,8 +25,6 @@ export class HomeComponent implements OnInit {
     new Card(Card.TYPE_VIDEO, Card.TAG_RECUERDO, new Video("x3wmqMMJD6E", "Laura Casarrubios")),
     new Card(Card.TYPE_CHALLENGE_VIDEO, Card.TAG_RETO, new Challenge('K6ECvWkh2K8', "Recuerdo: Desde niños siempre hemos estado juntos, no había foto mía sin que aparecieses haciendo la gansa. Te quiero! (Hector)", "Hector",false,this.success)),
     new Card(Card.TYPE_AUDIO, Card.TAG_RECUERDO, new Asset("assets/audios/w001.ogg", "Paquita Salas")),
-    new Card(Card.TYPE_CHALLENGE_VIDEO, Card.TAG_RETO, new Challenge('7Ys5KapHuRk', "Vacaciones: Un día cojiste un avión,al llegar todo era agua, te recojí en el coche y disfrutamos de un maravilloso lugar y comida, con más TIEMPO del que tenías en Madrid. (Miguel)", "Miguel",false,this.success)),
-
 ];
 
   constructor() {}
