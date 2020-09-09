@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Photo } from 'src/app/shared/models/photo.model';
+import { Asset } from 'src/app/shared/models/asset.model';
 
 @Component({
   selector: 'app-photo-card',
@@ -8,7 +8,7 @@ import { Photo } from 'src/app/shared/models/photo.model';
 })
 export class PhotoCardComponent implements OnInit {
   @Input()
-  photo: Photo;
+  photo: Asset;
 
   constructor() { }
 

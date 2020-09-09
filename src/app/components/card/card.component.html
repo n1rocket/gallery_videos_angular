@@ -2,6 +2,7 @@
   <span [ngSwitch]="card.type">
     <p *ngSwitchCase="card.classReference.TYPE_CHALLENGE_VIDEO"><app-video-challenge [video]="card.data"></app-video-challenge></p>
     <p *ngSwitchCase="card.classReference.TYPE_PHOTO"><app-photo-card [photo]="card.data"></app-photo-card></p>
+    <p *ngSwitchCase="card.classReference.TYPE_AUDIO"><app-audio-card [audio]="card.data"></app-audio-card></p>
     <p *ngSwitchCase="card.classReference.TYPE_VIDEO"><app-video-card [video]="card.data"></app-video-card></p>
     <p *ngSwitchDefault></p>
   </span>
@@ -11,7 +12,8 @@
   {'badge-primary': card.tag === card.classReference.TAG_ANECDOTA,
    'badge-info':card.tag === card.classReference.TAG_HUMOR ,
    'badge-secondary':card.tag === card.classReference.TAG_RECUERDO ,
-   'badge-light':card.tag === card.classReference.TAG_RETO
+   'badge-light':card.tag === card.classReference.TAG_RETO ,
+   'badge-success':card.tag === card.classReference.TAG_MUSICA
    }" >{{
     card.tag
   }}</span>

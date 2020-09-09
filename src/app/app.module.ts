@@ -12,9 +12,10 @@ import { CardComponent } from './components/card/card.component';
 import { VideoChallengeComponent } from './components/video-challenge/video-challenge.component';
 import { PhotoCardComponent } from './components/photo-card/photo-card.component';
 import { VideoCardComponent } from './components/video-card/video-card.component';
+import { AudioCardComponent } from './components/audio-card/audio-card.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, VideoComponent, VideoChallengeComponent, CardComponent, PhotoCardComponent, VideoCardComponent],
+  declarations: [AppComponent, HomeComponent, VideoComponent, VideoChallengeComponent, CardComponent, PhotoCardComponent, VideoCardComponent, AudioCardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
