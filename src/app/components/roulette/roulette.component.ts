@@ -17,6 +17,9 @@ export class RouletteComponent implements OnInit {
   spinTimeTotal: number = 0;
   spinAngleStart: number = 0;
 
+  width = 300;
+  height = 300;
+
   ctx: CanvasRenderingContext2D;
   @ViewChild('canvas', {static: false})
   canvas: ElementRef<HTMLCanvasElement>;
@@ -34,11 +37,15 @@ export class RouletteComponent implements OnInit {
   drawRouletteWheel(): void {
     this.ctx = this.canvas.nativeElement.getContext('2d');
 
-    let outsideRadius = 200;
-    let textRadius = 140;
-    let insideRadius = 100;
+    let halfWidth = this.width/2;
+    let halfHeight = this.height/2;
 
-    this.ctx.clearRect(0, 0, 500, 500);
+    let outsideRadius = halfWidth;
+    let insideRadius = 70;
+    let textRadius = 100;
+
+
+    this.ctx.clearRect(0, 0, this.width, this.height);
 
     this.ctx.strokeStyle = 'white';
     this.ctx.lineWidth = 2;
@@ -50,8 +57,8 @@ export class RouletteComponent implements OnInit {
       this.ctx.fillStyle = this.getColor(i, this.options.length);
 
       this.ctx.beginPath();
-      this.ctx.arc(250, 250, outsideRadius, angle, angle + this.arc, false);
-      this.ctx.arc(250, 250, insideRadius, angle + this.arc, angle, true);
+      this.ctx.arc(halfWidth, halfHeight, outsideRadius, angle, angle + this.arc, false);
+      this.ctx.arc(halfWidth, halfHeight, insideRadius, angle + this.arc, angle, true);
       this.ctx.stroke();
       this.ctx.fill();
 
@@ -62,8 +69,8 @@ export class RouletteComponent implements OnInit {
       //this.ctx.shadowColor = 'rgb(220,220,220)';
       this.ctx.fillStyle = 'white';
       this.ctx.translate(
-        250 + Math.cos(angle + this.arc / 2) * textRadius,
-        250 + Math.sin(angle + this.arc / 2) * textRadius
+        halfWidth + Math.cos(angle + this.arc / 2) * textRadius,
+        halfHeight + Math.sin(angle + this.arc / 2) * textRadius
       );
       this.ctx.rotate(angle + this.arc / 2 + Math.PI / 2);
       let text = this.options[i];
@@ -74,14 +81,14 @@ export class RouletteComponent implements OnInit {
     //Arrow
     this.ctx.fillStyle = 'black';
     this.ctx.beginPath();
-    this.ctx.moveTo(250 - 4, 250 - (outsideRadius + 5));
-    this.ctx.lineTo(250 + 4, 250 - (outsideRadius + 5));
-    this.ctx.lineTo(250 + 4, 250 - (outsideRadius - 5));
-    this.ctx.lineTo(250 + 9, 250 - (outsideRadius - 5));
-    this.ctx.lineTo(250 + 0, 250 - (outsideRadius - 13));
-    this.ctx.lineTo(250 - 9, 250 - (outsideRadius - 5));
-    this.ctx.lineTo(250 - 4, 250 - (outsideRadius - 5));
-    this.ctx.lineTo(250 - 4, 250 - (outsideRadius + 5));
+    this.ctx.moveTo(halfWidth - 4, halfHeight - (outsideRadius + 5));
+    this.ctx.lineTo(halfWidth + 4, halfHeight - (outsideRadius + 5));
+    this.ctx.lineTo(halfWidth + 4, halfHeight - (outsideRadius - 5));
+    this.ctx.lineTo(halfWidth + 9, halfHeight - (outsideRadius - 5));
+    this.ctx.lineTo(halfWidth + 0, halfHeight - (outsideRadius - 13));
+    this.ctx.lineTo(halfWidth - 9, halfHeight - (outsideRadius - 5));
+    this.ctx.lineTo(halfWidth - 4, halfHeight - (outsideRadius - 5));
+    this.ctx.lineTo(halfWidth - 4, halfHeight - (outsideRadius + 5));
     this.ctx.fill();
   }
 
@@ -140,12 +147,12 @@ export class RouletteComponent implements OnInit {
     let arcd = (this.arc * 180) / Math.PI;
     let index = Math.floor((360 - (degrees % 360)) / arcd);
     this.ctx.save();
-    this.ctx.font = 'bold 30px Helvetica, Arial';
+    this.ctx.font = 'bold 26px Helvetica, Arial';
     let text = this.options[index];
     this.ctx.fillText(
       text,
-      250 - this.ctx.measureText(text).width / 2,
-      250 + 10
+      this.width/2 - this.ctx.measureText(text).width / 2,
+      this.height/2 + 10
     );
     this.ctx.restore();
   }
