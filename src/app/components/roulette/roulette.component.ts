@@ -21,8 +21,10 @@ export class RouletteComponent implements OnInit {
   height = 300;
 
   ctx: CanvasRenderingContext2D;
-  @ViewChild('canvas', {static: false})
-  canvas: ElementRef<HTMLCanvasElement>;
+  @ViewChild('canvas', {static: false}) canvas: ElementRef<HTMLCanvasElement>;
+  @ViewChild('bote') audio: ElementRef;
+  private audioContainer: HTMLAudioElement;
+  soundMuted = false;
 
   constructor() {}
 
@@ -31,7 +33,15 @@ export class RouletteComponent implements OnInit {
   ngAfterViewInit(): void {
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
+    this.audioContainer = this.audio.nativeElement;
     this.drawRouletteWheel();
+  }
+
+  mute():void{
+    console.log("mute- before: " + this.soundMuted);
+
+    this.soundMuted = !this.soundMuted;
+    this.audioContainer.muted = this.soundMuted;
   }
 
   drawRouletteWheel(): void {
@@ -119,9 +129,10 @@ export class RouletteComponent implements OnInit {
   }
 
   spin(): void {
+    this.audioContainer.play();
     this.spinAngleStart = Math.random() * 10 + 10;
     this.spinTime = 0;
-    this.spinTimeTotal = Math.random() * 3 + 4 * 1000;
+    this.spinTimeTotal = Math.random() * 3 + 12 * 1000;
     this.rotateWheel();
   }
 
