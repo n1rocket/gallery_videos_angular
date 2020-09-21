@@ -8,15 +8,15 @@
       <span *ngIf="soundMuted"><i class="fa ml-2 fa-volume-mute"></i></span>
     </div>
 
-    <button #button type="button" class="btn btn-sm btn-primary p-2 m-1 mb-4" (click)="spin()">
-      Prueba suerte
-    </button>
-
     <div class="row">
       <div class="col p-2">
         <canvas #canvas width={{width}} height={{height}}></canvas>
       </div>
 
     </div>
+
+    <button #button type="button" class="btn btn-sm btn-primary p-2 m-1 mb-4" (click)="spin()">
+      Prueba suerte
+    </button>
   </div>
 </div>

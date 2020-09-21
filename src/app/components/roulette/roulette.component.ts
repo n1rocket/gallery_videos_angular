@@ -1,4 +1,5 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Card } from 'src/app/shared/models/card.model';
 
 @Component({
   selector: 'app-roulette',
@@ -6,10 +7,16 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./roulette.component.css'],
 })
 export class RouletteComponent implements OnInit {
-  options: string[] = ['Recuerdo', 'Humor', 'Reto', 'Música', 'Audio',];
+  @Input()
+  options: string[];
+
+  @Output()
+  optionSelected = new EventEmitter<string>()
+
+  isRotating: boolean = false;
 
   startAngle: number = 0;
-  arc: number = Math.PI / (this.options.length / 2);
+  arc: number;
   spinTimeout = null;
 
   spinArcStart: number = 10;
@@ -21,85 +28,102 @@ export class RouletteComponent implements OnInit {
   height = 300;
 
   ctx: CanvasRenderingContext2D;
-  @ViewChild('canvas', {static: false}) canvas: ElementRef<HTMLCanvasElement>;
+  @ViewChild('canvas', { static: false }) canvas: ElementRef<HTMLCanvasElement>;
   @ViewChild('bote') audio: ElementRef;
   private audioContainer: HTMLAudioElement;
   soundMuted = false;
 
-  constructor() {}
+  constructor() {
+
+  }
 
   ngOnInit(): void {  }
 
   ngAfterViewInit(): void {
+    console.log("-> ngAfterViewInit: " + this.options);
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
     this.audioContainer = this.audio.nativeElement;
     this.drawRouletteWheel();
   }
 
-  mute():void{
-    console.log("mute- before: " + this.soundMuted);
-
+  mute(): void {
     this.soundMuted = !this.soundMuted;
     this.audioContainer.muted = this.soundMuted;
   }
 
   drawRouletteWheel(): void {
-    this.ctx = this.canvas.nativeElement.getContext('2d');
+      this.arc = Math.PI / (this.options.length / 2);
 
-    let halfWidth = this.width/2;
-    let halfHeight = this.height/2;
+      this.ctx = this.canvas.nativeElement.getContext('2d');
 
-    let outsideRadius = halfWidth;
-    let insideRadius = 70;
-    let textRadius = 100;
+      let halfWidth = this.width / 2;
+      let halfHeight = this.height / 2;
 
+      let outsideRadius = halfWidth;
+      let insideRadius = 70;
+      let textRadius = 100;
 
-    this.ctx.clearRect(0, 0, this.width, this.height);
+      this.ctx.clearRect(0, 0, this.width, this.height);
 
-    this.ctx.strokeStyle = 'white';
-    this.ctx.lineWidth = 2;
+      this.ctx.strokeStyle = 'white';
+      this.ctx.lineWidth = 2;
 
-    this.ctx.font = 'bold 18px Helvetica, Arial';
+      this.ctx.font = 'bold 18px Helvetica, Arial';
 
-    for (var i = 0; i < this.options.length; i++) {
-      let angle = this.startAngle + i * this.arc;
-      this.ctx.fillStyle = this.getColor(i, this.options.length);
+      for (var i = 0; i < this.options.length; i++) {
+        let angle = this.startAngle + i * this.arc;
+        this.ctx.fillStyle = this.getColor(i, this.options.length);
 
+        this.ctx.beginPath();
+        this.ctx.arc(
+          halfWidth,
+          halfHeight,
+          outsideRadius,
+          angle,
+          angle + this.arc,
+          false
+        );
+        this.ctx.arc(
+          halfWidth,
+          halfHeight,
+          insideRadius,
+          angle + this.arc,
+          angle,
+          true
+        );
+        this.ctx.stroke();
+        this.ctx.fill();
+
+        this.ctx.save();
+        this.ctx.shadowOffsetX = -1;
+        this.ctx.shadowOffsetY = -1;
+        this.ctx.shadowBlur = 0;
+        //this.ctx.shadowColor = 'rgb(220,220,220)';
+        this.ctx.fillStyle = 'white';
+        this.ctx.translate(
+          halfWidth + Math.cos(angle + this.arc / 2) * textRadius,
+          halfHeight + Math.sin(angle + this.arc / 2) * textRadius
+        );
+        this.ctx.rotate(angle + this.arc / 2 + Math.PI / 2);
+        let text = this.options[i];
+        this.ctx.fillText(text, -this.ctx.measureText(text).width / 2, 0);
+        this.ctx.restore();
+      }
+
+      //Arrow
+      this.ctx.fillStyle = 'black';
       this.ctx.beginPath();
-      this.ctx.arc(halfWidth, halfHeight, outsideRadius, angle, angle + this.arc, false);
-      this.ctx.arc(halfWidth, halfHeight, insideRadius, angle + this.arc, angle, true);
-      this.ctx.stroke();
+      this.ctx.moveTo(halfWidth - 4, halfHeight - (outsideRadius + 5));
+      this.ctx.lineTo(halfWidth + 4, halfHeight - (outsideRadius + 5));
+      this.ctx.lineTo(halfWidth + 4, halfHeight - (outsideRadius - 5));
+      this.ctx.lineTo(halfWidth + 9, halfHeight - (outsideRadius - 5));
+      this.ctx.lineTo(halfWidth + 0, halfHeight - (outsideRadius - 13));
+      this.ctx.lineTo(halfWidth - 9, halfHeight - (outsideRadius - 5));
+      this.ctx.lineTo(halfWidth - 4, halfHeight - (outsideRadius - 5));
+      this.ctx.lineTo(halfWidth - 4, halfHeight - (outsideRadius + 5));
       this.ctx.fill();
 
-      this.ctx.save();
-      this.ctx.shadowOffsetX = -1;
-      this.ctx.shadowOffsetY = -1;
-      this.ctx.shadowBlur = 0;
-      //this.ctx.shadowColor = 'rgb(220,220,220)';
-      this.ctx.fillStyle = 'white';
-      this.ctx.translate(
-        halfWidth + Math.cos(angle + this.arc / 2) * textRadius,
-        halfHeight + Math.sin(angle + this.arc / 2) * textRadius
-      );
-      this.ctx.rotate(angle + this.arc / 2 + Math.PI / 2);
-      let text = this.options[i];
-      this.ctx.fillText(text, -this.ctx.measureText(text).width / 2, 0);
-      this.ctx.restore();
-    }
-
-    //Arrow
-    this.ctx.fillStyle = 'black';
-    this.ctx.beginPath();
-    this.ctx.moveTo(halfWidth - 4, halfHeight - (outsideRadius + 5));
-    this.ctx.lineTo(halfWidth + 4, halfHeight - (outsideRadius + 5));
-    this.ctx.lineTo(halfWidth + 4, halfHeight - (outsideRadius - 5));
-    this.ctx.lineTo(halfWidth + 9, halfHeight - (outsideRadius - 5));
-    this.ctx.lineTo(halfWidth + 0, halfHeight - (outsideRadius - 13));
-    this.ctx.lineTo(halfWidth - 9, halfHeight - (outsideRadius - 5));
-    this.ctx.lineTo(halfWidth - 4, halfHeight - (outsideRadius - 5));
-    this.ctx.lineTo(halfWidth - 4, halfHeight - (outsideRadius + 5));
-    this.ctx.fill();
   }
 
   byte2Hex(n): string {
@@ -129,11 +153,20 @@ export class RouletteComponent implements OnInit {
   }
 
   spin(): void {
-    this.audioContainer.play();
-    this.spinAngleStart = Math.random() * 10 + 10;
-    this.spinTime = 0;
-    this.spinTimeTotal = Math.random() * 3 + 12 * 1000;
-    this.rotateWheel();
+    if (!this.isRotating && this.options.length > 0) {
+      this.isRotating = true;
+      this.audioContainer.play();
+      this.spinAngleStart = Math.random() * 10 + 10;
+      this.spinTime = 0;
+      this.spinTimeTotal =
+        Math.random() * 3 +
+        (Math.random() * 3 +
+          Math.random() * 3 +
+          Math.random() * 3 +
+          Math.random() * 3) *
+          1000;
+      this.rotateWheel();
+    }
   }
 
   rotateWheel(): void {
@@ -147,9 +180,9 @@ export class RouletteComponent implements OnInit {
       this.easeOut(this.spinTime, 0, this.spinAngleStart, this.spinTimeTotal);
     this.startAngle += (spinAngle * Math.PI) / 180;
     this.drawRouletteWheel();
-    this.spinTimeout = setTimeout( () => {
+    this.spinTimeout = setTimeout(() => {
       this.rotateWheel();
-  }, 30);
+    }, 30);
   }
 
   stopRotateWheel(): void {
@@ -158,14 +191,19 @@ export class RouletteComponent implements OnInit {
     let arcd = (this.arc * 180) / Math.PI;
     let index = Math.floor((360 - (degrees % 360)) / arcd);
     this.ctx.save();
-    this.ctx.font = 'bold 26px Helvetica, Arial';
+    this.ctx.font = 'bold 22px Helvetica, Arial';
     let text = this.options[index];
     this.ctx.fillText(
       text,
-      this.width/2 - this.ctx.measureText(text).width / 2,
-      this.height/2 + 10
+      this.width / 2 - this.ctx.measureText(text).width / 2,
+      this.height / 2 + 10
     );
     this.ctx.restore();
+    this.optionSelected.emit(this.options[index]);
+
+    this.audioContainer.pause();
+    this.audioContainer.currentTime = 0;
+    this.isRotating = false;
   }
 
   easeOut(t: number, b: number, c: number, d: number): number {

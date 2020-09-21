@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <!-- saved from url=(0049)https://getbootstrap.com/docs/4.0/examples/album/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      rel="icon"
+      href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico"
+    />
 
     <title>El Reto de Eva</title>
-
   </head>
 
   <body>
-
     <header>
       <div class="navbar navbar-dark bg-dark box-shadow">
         <div class="container d-flex justify-content-between">
           <a href="/" class="navbar-brand d-flex align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="mr-2"
+            >
+              <path
+                d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+              ></path>
+              <circle cx="12" cy="13" r="4"></circle>
+            </svg>
             <strong>El Reto de Eva</strong>
           </a>
         </div>
@@ -25,42 +47,67 @@
     </header>
 
     <main role="main">
-
       <section class="jumbotron text-center">
         <div class="container">
           <i class="fab fa-5x fa-fort-awesome" aria-hidden="true"></i>
           <p></p>
           <h1 class="jumbotron-heading">Historia</h1>
-          <p class="lead text-muted">Érase una vez, un pueblecito muy, muy lejano, al que no se podía llegar, ni en avión ni en barco. No era ni grande ni pequeño. Un lugar donde el sol se reflejaba en las blancas paredes de sus casas. Las risas de los más pequeños era el sonido mas habitual en sus calles. Apenas tenían juguetes, pues no los necesitaban. Con su imaginación, a cualquier objeto lo convertían en el mejor juguete del mundo.</p>
+          <p class="lead text-muted">
+            Érase una vez, un pueblecito muy, muy lejano, al que no se podía
+            llegar, ni en avión ni en barco. No era ni grande ni pequeño. Un
+            lugar donde el sol se reflejaba en las blancas paredes de sus casas.
+            Las risas de los más pequeños era el sonido mas habitual en sus
+            calles. Apenas tenían juguetes, pues no los necesitaban. Con su
+            imaginación, a cualquier objeto lo convertían en el mejor juguete
+            del mundo.
+          </p>
         </div>
       </section>
-
-        <div class="container text-center">
-              <app-roulette></app-roulette>
-        </div>
-
-
 
       <section class="jumbotron text-center">
         <div class="container">
           <i class="fas fa-5x fa-list" aria-hidden="true"></i>
           <p></p>
           <h1 class="jumbotron-heading">Instrucciones</h1>
-          <p class="lead text-muted">El reto es sencillo, pero todo depende de tu memoria y todos los aquí presentes te quieren mucho, pero conocen tus debilidades. 😂 Cada persona estará oculta tras un candado, y sólo podrás abrir la puerta con la ayuda de una anécdota que tendrás que relacionar con una persona, su NOMBRE será la clave que te abrirá su puerta.</p>
+          <p class="lead text-muted">
+            El reto es sencillo, pero todo depende de tu memoria y todos los
+            aquí presentes te quieren mucho, pero conocen tus debilidades. 😂
+            Cada persona estará oculta tras un candado, y sólo podrás abrir la
+            puerta con la ayuda de una anécdota que tendrás que relacionar con
+            una persona, su NOMBRE será la clave que te abrirá su puerta.
+          </p>
         </div>
       </section>
 
+      <div class="container text-center">
+        <app-roulette
+          [options]="getDistinctTags()"
+          (optionSelected)="optionSelected($event)"
+        ></app-roulette>
+      </div>
+
+      <div class="progress">
+        <div
+          class="progress-bar"
+          role="progressbar"
+          [style.width]="getProgress() + '%'"
+          aria-valuenow="25"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          {{ getProgress() }}%
+        </div>
+      </div>
+
       <div class="py-5 bg-light">
         <div class="container">
-
           <div class="row">
-            <div class="col-md-4" *ngFor="let item of items">
-              <app-card [card]=item></app-card>
+            <div class="col-md-4" *ngFor="let item of itemsEnabled">
+              <app-card [card]="item"></app-card>
             </div>
           </div>
         </div>
       </div>
-
     </main>
 
     <footer class="text-muted center">
@@ -71,23 +118,29 @@
       <div class="container">
         <div class="row justify-content-md-center">
           <div class="col-md-auto">
-
             <form #f="ngForm" (ngSubmit)="onSubmit(f)">
-
               <div class="mb-2">
-                <input class="form-control input-sm" type = "text" name = "code" placeholder = "Código general" ngModel>
+                <input
+                  class="form-control input-sm"
+                  type="text"
+                  name="code"
+                  placeholder="Código general"
+                  ngModel
+                />
                 <div *ngIf="error" class="alert alert-danger">
                   Vaya, te has equivocado.
                 </div>
-                <div *ngIf="success" class="alert alert-success">
-                  ¡Eso es!
-                </div>
+                <div *ngIf="success" class="alert alert-success">¡Eso es!</div>
               </div>
 
               <div class="d-flex justify-content-between align-items-center">
-
                 <div class="btn-group">
-                  <button type="submit" class="btn btn-sm btn-outline-secondary">Desbloquear</button>
+                  <button
+                    type="submit"
+                    class="btn btn-sm btn-outline-secondary"
+                  >
+                    Desbloquear
+                  </button>
                 </div>
                 <small class="text-muted">Consigue todo</small>
               </div>
@@ -101,3 +154,5 @@
         <p>Made with ❤</p>
       </div>
     </footer>
+  </body>
+</html>
