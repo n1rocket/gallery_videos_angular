@@ -14,9 +14,10 @@ import { PhotoCardComponent } from './components/photo-card/photo-card.component
 import { VideoCardComponent } from './components/video-card/video-card.component';
 import { AudioCardComponent } from './components/audio-card/audio-card.component';
 import { RouletteComponent } from './components/roulette/roulette.component';
+import { ExamplesComponent } from './components/examples/examples.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, VideoComponent, VideoChallengeComponent, CardComponent, PhotoCardComponent, VideoCardComponent, AudioCardComponent, RouletteComponent],
+  declarations: [AppComponent, HomeComponent, VideoComponent, VideoChallengeComponent, CardComponent, PhotoCardComponent, VideoCardComponent, AudioCardComponent, RouletteComponent, ExamplesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

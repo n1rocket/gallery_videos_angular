@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.0/examples/album/ -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      rel="icon"
+      href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico"
+    />
+
+    <title>El Reto de Eva - Ejemplos</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="/" class="navbar-brand d-flex align-items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="mr-2"
+            >
+              <path
+                d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+              ></path>
+              <circle cx="12" cy="13" r="4"></circle>
+            </svg>
+            <strong>El Reto de Eva - Ejemplos</strong>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+      <section class="jumbotron text-center">
+        <div class="container">
+          <i class="fas fa-5x fa-address-card" aria-hidden="true"></i>
+          <p></p>
+          <h1 class="jumbotron-heading">¿Cómo puedo enviar contenido?</h1>
+
+          <p class="text-muted">
+            1º Revisa los ejemplos.
+          </p>
+          <p class="text-muted">
+            2º Puedes enviar varios tipos, pero que tengan toda la información que aparece en los ejemplos de manera individual.
+          </p>
+          <p class="text-muted">
+            3º Enviar un whatsapp a: 673 79 48 53 -  <a  href="https://api.whatsapp.com/send?phone=34673794853"> Puedes pulsar aquí:  </a>
+            <a href="https://api.whatsapp.com/send?phone=34673794853"><i class="fab fa-whatsapp"></i>
+            </a></p>
+
+          <p class="text-muted">
+            4º Si quieres modificar alguno, debes indicar cuál es exactamente.
+          </p>
+          <p class="text-muted">
+            Listado de ejemplos:
+          </p>
+        </div>
+      </section>
+
+      <div class="py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4" *ngFor="let item of items">
+              <app-card [card]="item"></app-card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-muted center">
+      <div class="container text-center p-1">
+        <p>Made with ❤</p>
+      </div>
+    </footer>
+  </body>
+</html>
