@@ -75,7 +75,7 @@ export class Data{
       Card.TYPE_PHOTO,
       Card.TAG_RECUERDO,
       new Asset(
-        'assets/images/photo1eva.jpg',
+        'assets/images/photo0eva.png',
         'Puedes mandar una foto o dibujo para incluírla entre sus recuerdos.',
         'Persona que envía el contenido'
       )
@@ -153,7 +153,7 @@ export class Data{
       Card.TYPE_PHOTO,
       Card.TAG_RECUERDO,
       new Asset(
-        'assets/images/photo1eva.jpg',
+        'assets/images/photo0eva.png',
         'Puedes mandar una foto o dibujo para incluírla entre sus recuerdos.',
         'Persona que envía el contenido'
       )
