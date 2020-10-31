@@ -9,7 +9,7 @@ import { Card } from 'src/app/shared/models/card.model';
 export class CardComponent implements OnInit {
 
   @Input()
-  card: Card = new Card('','','');
+  card: Card = new Card('','','', '');
 
   constructor() { }
 
