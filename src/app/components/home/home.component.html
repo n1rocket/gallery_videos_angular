@@ -87,7 +87,50 @@
         </div>
       </section>
 
-      <div class="container text-center">
+      <section class="jumbotron text-center">
+
+      <p>Introduce tu código para activar el contenido</p>
+
+        <div class="container">
+          <div class="container">
+            <div class="row justify-content-md-center">
+              <div class="col-md-auto">
+                <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+                  <div class="mb-2">
+                    <input
+                      class="form-control input-sm"
+                      type="text"
+                      name="code"
+                      placeholder="Código"
+                      value="Ejemplos"
+                      ngModel
+                    />
+                    <div *ngIf="error" class="alert alert-danger">
+                      Vaya, te has equivocado.
+                    </div>
+                    <div *ngIf="success" class="alert alert-success">¡Eso es!</div>
+                  </div>
+    
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button
+                        type="submit"
+                        class="btn btn-sm btn-outline-secondary"
+                      >
+                        Desbloquear
+                      </button>
+                    </div>
+                    <small class="text-muted">Consigue todo</small>
+                  </div>
+                </form>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container text-center" *ngIf="showRoulette">
         <app-roulette
           [options]="getDistinctTags()"
           (optionSelected)="optionSelected($event)"
@@ -123,45 +166,9 @@
         <p>🎂 Feliz cumpleaños 🎂</p>
       </div>
 
-      <div class="container">
-        <div class="row justify-content-md-center">
-          <div class="col-md-auto">
-            <form #f="ngForm" (ngSubmit)="onSubmit(f)">
-              <div class="mb-2">
-                <input
-                  class="form-control input-sm"
-                  type="text"
-                  name="code"
-                  placeholder="Código general"
-                  ngModel
-                />
-                <div *ngIf="error" class="alert alert-danger">
-                  Vaya, te has equivocado.
-                </div>
-                <div *ngIf="success" class="alert alert-success">¡Eso es!</div>
-              </div>
-
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button
-                    type="submit"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    Desbloquear
-                  </button>
-                </div>
-                <small class="text-muted">Consigue todo</small>
-              </div>
-            </form>
-            <p></p>
-          </div>
-        </div>
-      </div>
-
       <div class="container text-center p-1">
         <p>Made with ❤</p>
       </div>
-
 
       <div class="container text-center p-1">
         <a routerLink="/examples" >¿Cómo puedo enviar contenido?</a>

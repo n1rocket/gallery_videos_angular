@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Challenge } from 'src/app/shared/models/challenge.model';
 
 @Component({
   selector: 'app-video',

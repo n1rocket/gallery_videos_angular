@@ -12,10 +12,11 @@ import { Data } from 'src/app/shared/utils/data';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  showRoulette: boolean = false;
   error: boolean = false;
   success: boolean = false;
   lock: boolean = true;
-  generalCode: string = 'P3l1gr0';
+  generalCode: string = '12345678$';
 
   items: Card[] = [];
   itemsEnabled: Card[] = [];
@@ -24,48 +25,54 @@ export class HomeComponent implements OnInit {
 
   }
 
-  ngOnInit(): void {this.items = Data.initialItems;}
+  ngOnInit(): void {
+    this.items = Data.initialItems;
+  }
 
   getProgress(){
     return Math.round(this.itemsEnabled.length * 100 / Data.initialItems.length);
   }
 
   onSubmit(form: NgForm) {
-    console.log(form.value);
+    console.log(form.value)
 
-    this.lock = form.value.code != this.generalCode;
+    var items_unlocked : Card[]
 
-    this.error = this.lock;
-    this.success = !this.lock;
+    if(form.value.code == this.generalCode){
+      items_unlocked = Data.initialItems
+    }else{
+      items_unlocked = Data.initialItems.filter(card => 
+        {
+          console.log("------------ " )
+          console.log("------------> " + form.value.code)
+          console.log("------------> " + card.password)
+          console.log("------------ " )
 
-    if (this.success) {
-
-      this.itemsEnabled = Data.initialItems;
-      this.items = [];
-
-      this.items.forEach((element) => {
-        if (element.data instanceof Challenge) {
-          element.data.success = true;
-        }
-      });
+          return card.password == form.value.code;
+        } 
+        )
     }
+
+    this.error = items_unlocked.length == 0
+    this.success = items_unlocked.length > 0
+
+    this.items = items_unlocked
+    this.itemsEnabled = []
+
+    this.showRoulette = this.success;
   }
 
   getDistinctCards() : Card[]{
     return this.items.filter((thing, i, arr) => {
       return arr.indexOf(arr.find(t => t.tag === thing.tag)) === i;
     });
-
   }
-
 
   getDistinctTags() : string[]{
     let options : string[] = []
     this.getDistinctCards().map(card => options.push(card.tag))
     return options;
   }
-
-
 
   optionSelected(option: string) {
     let card = this.items.find(card => card.tag === option )

@@ -1,6 +1,7 @@
 export class Card {
   type: string;
   tag: string;
+  password: string;
   data: any;
 
   public classReference = Card;
@@ -16,9 +17,10 @@ export class Card {
   static TAG_ANECDOTA: string = 'ANÉCDOTA';
   static TAG_MUSICA: string = 'MÚSICA';
 
-  constructor(type: string, tag: string, data: any) {
+  constructor(type: string, tag: string, password: string, data: any) {
     this.type = type;
     this.tag = tag;
+    this.password = password;
     this.data = data;
   }
 }
