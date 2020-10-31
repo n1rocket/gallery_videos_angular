@@ -38,7 +38,9 @@ export class HomeComponent implements OnInit {
 
     var items_unlocked : Card[]
 
-    if(form.value.code == this.generalCode){
+    if(form.value.code == "Ejemplos"){
+      items_unlocked = Data.examples
+    }else if(form.value.code == this.generalCode){
       items_unlocked = Data.initialItems
     }else{
       items_unlocked = Data.initialItems.filter(card => 
