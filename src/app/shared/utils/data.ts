@@ -7,6 +7,26 @@ export class Data{
 
   static initialItems: Card[] = [
     new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_HUMOR,
+      "Laura_5544289?",
+      new Asset(
+        'assets/images/laurac_02.jpeg',
+        'Cumpleaños feliz, chupaté la nariz y sino te la chupas, te robaré un calcetín 🎶🎶🎶',
+        'Laura'
+      )
+    ),
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_SORPRESA,
+      "Laura_5544289?",
+      new Asset(
+        'assets/images/laurac_01.jpeg',
+        'Ya sé que las palabras no pueden sustituir un abrazo, pero sirven para hacerte llegar mis mejores deseos para tu cumpleaños. Y espero que salgamos a celebrar a un restaurante nuevo!!!!',
+        'Laura'
+      )
+    ),
+    new Card(
       Card.TYPE_VIDEO,
       Card.TAG_ANECDOTA,
       "Yvonne??yes!",
