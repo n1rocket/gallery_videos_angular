@@ -19,7 +19,6 @@
   <div class="card-body">
     <p class="card-text">{{ video.description }}</p>
 
-    <b>¿Quién soy?</b>
     <p></p>
 
     <form #f="ngForm" (ngSubmit)="onSubmit(f)">
@@ -35,7 +34,8 @@
           Vaya, te has equivocado.
         </div>
         <div *ngIf="video.success" class="alert alert-success">
-          ¡Eso es, soy {{ video.answer }}!
+          ¡Eso es, la respuesta es {{ video.answer }}!
+          <p class="card-text"><b>Enviada por:</b> {{video.sended_by}}</p>
         </div>
       </div>
 

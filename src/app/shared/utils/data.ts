@@ -9,6 +9,29 @@ export class Data{
     new Card(
       Card.TYPE_VIDEO,
       Card.TAG_ANECDOTA,
+      "Yvonne??yes!",
+      new Video(
+        '0Fb-NIFZA-Q',
+        '#RAEInforma #AppVaSinMayuscula #LeasingEnCursiva',
+        'Yvonne'
+      )
+    ),
+    new Card(
+      Card.TYPE_CHALLENGE_VIDEO,
+      Card.TAG_RETO,
+      "Yvonne??yes!",
+      new Challenge(
+        'Xm8i6YtFDGw',
+        "Inteligencia artificial lleva mayúsculas (si/no)",
+        'no',
+        false,
+        false,
+        "Yvonne"
+      )
+    ),
+    new Card(
+      Card.TYPE_VIDEO,
+      Card.TAG_ANECDOTA,
       "NachoQuero|Mahou1",
       new Video(
         '8wHfq9BxV50',
@@ -156,10 +179,11 @@ export class Data{
       "Ejemplos",
       new Challenge(
         'am1_JLFDFMw',
-        'Puedes crear un vídeo oculto con una contraseña, que tenga que adivinar con este texto, o que tenga que ir a un lugar para obtener esa contraseña. Todo es posible. Tras descubrir la contraseña se desbloqueará el vídeo que hayas mandado. Ejemplo: Si pones \"Pepe\" puedes desbloquear el vídeo.',
+        'Puedes crear un vídeo oculto con una contraseña, que tenga que adivinar con este texto, o que tenga que ir a un lugar para obtener esa contraseña. Todo es posible. Tras descubrir la contraseña se desbloqueará el vídeo que hayas mandado. Ejemplo: Si pones \"Pepe\" puedes desbloquear el vídeo. ¿Quién Soy?',
         'Pepe',
         false,
-        false
+        false,
+        "Pepe"
       )
     ),
     new Card(

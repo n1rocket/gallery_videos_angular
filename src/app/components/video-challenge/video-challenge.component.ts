@@ -14,7 +14,7 @@ export class VideoChallengeComponent implements OnInit {
 
 
   @Input()
-  video: Challenge = new Challenge('','','',false, false);
+  video: Challenge = new Challenge('','','',false, false, '');
 
 
   ngOnInit(): void {
