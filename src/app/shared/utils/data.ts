@@ -7,6 +7,26 @@ export class Data{
 
   static initialItems: Card[] = [
     new Card(
+      Card.TYPE_VIDEO,
+      Card.TAG_MUSICA,
+      "Christiam&924",
+      new Video(
+        '3SL0oRcD7t0',
+        'Nada, se ha venido tu amiga Janice para felicitarte también 😜. Sigue soñando Eva, que si tus sueños son la mitad de bonitos que tú merecerán tanto la pena. Pasa un día genial y ya tomaremos una. ',
+        'Christiam Romera'
+      )
+    ),
+    new Card(
+      Card.TYPE_VIDEO,
+      Card.TAG_SORPRESA,
+      "Christiam&924",
+      new Video(
+        'PV1NVz2LvgA',
+        '',
+        'Christiam Romera'
+      )
+    ),
+    new Card(
       Card.TYPE_PHOTO,
       Card.TAG_ANECDOTA,
       "Alex$777",

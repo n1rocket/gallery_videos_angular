@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   lock: boolean = true;
   generalCode: string = '12345678$';
 
+  initialItems: Card[] = [];
   items: Card[] = [];
   itemsEnabled: Card[] = [];
 
@@ -26,11 +27,15 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.items = Data.initialItems;
+    //this.items = Data.initialItems;
   }
 
   getProgress(){
-    return Math.round(this.itemsEnabled.length * 100 / Data.initialItems.length);
+    if(this.itemsEnabled.length > 0){
+      return Math.round(this.itemsEnabled.length * 100 / this.initialItems.length);
+    }else{
+      return 0;
+    }
   }
 
   onSubmit(form: NgForm) {
@@ -59,6 +64,7 @@ export class HomeComponent implements OnInit {
     this.success = items_unlocked.length > 0
 
     this.items = items_unlocked
+    this.initialItems = items_unlocked
     this.itemsEnabled = []
 
     this.showRoulette = this.success;

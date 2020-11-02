@@ -15,6 +15,7 @@ export class Card {
   static TAG_RECUERDO: string = 'RECUERDO';
   static TAG_HUMOR: string = 'HUMOR';
   static TAG_ANECDOTA: string = 'ANÉCDOTA';
+  static TAG_SORPRESA: string = 'SORPRESA';
   static TAG_MUSICA: string = 'MÚSICA';
 
   constructor(type: string, tag: string, password: string, data: any) {
