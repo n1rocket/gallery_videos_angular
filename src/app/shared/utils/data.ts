@@ -7,6 +7,16 @@ export class Data{
 
   static initialItems: Card[] = [
     new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_SORPRESA,
+      "Ángel#912",
+      new Asset(
+        '',
+        'Jappy Barry Evarista!! Pasalo en grande, disfruta a tope y nunca olvides a Nicholas, el nunca lo hará 😜😚.',
+        'Ángel'
+      )
+    ),
+    new Card(
       Card.TYPE_VIDEO,
       Card.TAG_SORPRESA,
       "Maria/00012",
