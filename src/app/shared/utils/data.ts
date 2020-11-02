@@ -11,7 +11,7 @@ export class Data{
       Card.TAG_SORPRESA,
       "Ángel#912",
       new Asset(
-        '',
+        'assets/images/nicolascage.gif',
         'Jappy Barry Evarista!! Pasalo en grande, disfruta a tope y nunca olvides a Nicholas, el nunca lo hará 😜😚.',
         'Ángel'
       )
