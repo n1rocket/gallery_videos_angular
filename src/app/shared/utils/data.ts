@@ -7,6 +7,16 @@ export class Data{
 
   static initialItems: Card[] = [
     new Card(
+      Card.TYPE_VIDEO,
+      Card.TAG_ANECDOTA,
+      "NachoQuero|Mahou1",
+      new Video(
+        '8wHfq9BxV50',
+        'Su primera entrevista para la televisión de Linares. Estaba súper nerviosa, pero lo hizo genial.',
+        'Nacho Quero'
+      )
+    ),
+    new Card(
       Card.TYPE_PHOTO,
       Card.TAG_SORPRESA,
       "Ángel#912",
