@@ -8,12 +8,90 @@ export class Data{
   static initialItems: Card[] = [
 
     new Card(
+      Card.TYPE_VIDEO,
+      Card.TAG_SORPRESA,
+      "CanaryIslands(<3)",
+      new Video(
+        'BBVlgO7oXus',
+        '',
+        'Canario'
+      )
+    ),
+
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_RECUERDO,
+      "CanaryIslands(<3)",
+      new Asset(
+        'assets/images/perrito.jpg',
+        '',
+        'Canario'
+      )
+    ),
+
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_RECUERDO,
+      "CanaryIslands(<3)",
+      new Asset(
+        'assets/images/granada.jpg',
+        '',
+        'Canario'
+      )
+    ),
+
+    new Card(
+      Card.TYPE_CHALLENGE_VIDEO,
+      Card.TAG_RETO,
+      "CanaryIslands(<3)",
+      new Challenge(
+        '99gA1kNmDBk',
+        "Nombre del grupo de música ficticio liderado por una pelirroja muy bonita y tres lentejas de chocolate con leche recubierta por 150 capas de azúcar. (Respuesta toda en mayusculas)",
+        'EVA Y LOS LACASITOS',
+        false,
+        false,
+        "Canario"
+      )
+    ),
+    new Card(
+      Card.TYPE_AUDIO,
+      Card.TAG_RECUERDO,
+      "CanaryIslands(<3)",
+      new Asset(
+        'assets/audios/basura.aac',
+        '',
+        'Canario'
+      )
+    ),
+    new Card(
+      Card.TYPE_VIDEO,
+      Card.TAG_HUMOR,
+      "CanaryIslands(<3)",
+      new Video(
+        '-CI3wCy0BjA',
+        '',
+        'Canario'
+      )
+    ),
+
+    new Card(
+      Card.TYPE_VIDEO,
+      Card.TAG_MUSICA,
+      "CanaryIslands(<3)",
+      new Video(
+        'Yx09-v8KfPs',
+        'Sobre cómo un silbidito puede levantar el ánimo de una oficina entera. Seguro que lo tienes en la cabeza ahora mismo!',
+        'Canario'
+      )
+    ),
+
+    new Card(
       Card.TYPE_PHOTO,
       Card.TAG_HUMOR,
       "CanaryIslands(<3)",
       new Asset(
         '',
-        '-¿Te vienes a mi casa a hacer el trabajo de plástica? \n -Vale, me llevo la escuadra y el cartabón. \n-No tía, mi casa, mis reglas.',
+        '-¿Te vienes a mi casa a hacer el trabajo de plástica?               -Vale, me llevo la escuadra y el cartabón.         -No tía, mi casa, mis reglas.',
         'Canario'
       )
     ),
