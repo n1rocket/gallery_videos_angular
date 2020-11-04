@@ -25,7 +25,7 @@ export class Data{
       "Laurissss[princess]<3",
       new Asset(
         'assets/images/pinypon2.jpeg',
-        'Esta foto para que me recuerde siempre con manta como en la otra foto',
+        'Felisitasiones a la mejor compi de isleta!!! Guapetona disfruta de tu día que te lo mereces. I miss you beri mach, quiero volver a quemar palomitas pronto contigo!!',
         'Lauris'
       )
     ),
