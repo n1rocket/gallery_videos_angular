@@ -9,6 +9,41 @@ export class Data{
 
     new Card(
       Card.TYPE_PHOTO,
+      Card.TAG_HUMOR,
+      "CanaryIslands(<3)",
+      new Asset(
+        '',
+        '-¿Te vienes a mi casa a hacer el trabajo de plástica? \n -Vale, me llevo la escuadra y el cartabón. \n-No tía, mi casa, mis reglas.',
+        'Canario'
+      )
+    ),
+
+
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_SORPRESA,
+      "Laurissss[princess]<3",
+      new Asset(
+        'assets/images/pinypon2.jpeg',
+        'Esta foto para que me recuerde siempre con manta como en la otra foto',
+        'Lauris'
+      )
+    ),
+
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_SORPRESA,
+      "Laurissss[princess]<3",
+      new Asset(
+        'assets/images/pinypon1.jpeg',
+        'Pin y pon en la isleta del millón',
+        'Lauris'
+      )
+    ),
+    
+
+    new Card(
+      Card.TYPE_PHOTO,
       Card.TAG_SORPRESA,
       "DaniToleAndIdy%$12",
       new Asset(
