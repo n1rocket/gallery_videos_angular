@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   error: boolean = false;
   success: boolean = false;
   lock: boolean = true;
-  generalCode: string = '12345678$';
+  generalCode: string = '))=((asdñ12345678$$%&/(';
 
   initialItems: Card[] = [];
   items: Card[] = [];
