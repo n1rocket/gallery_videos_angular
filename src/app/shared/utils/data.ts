@@ -20,6 +20,17 @@ export class Data{
 
     new Card(
       Card.TYPE_VIDEO,
+      Card.TAG_HUMOR,
+      "2AppMando%·$%&/()11",
+      new Video(
+        'pA3-oVSRHz0',
+        '',
+        'Armando'
+      )
+    ),
+
+    new Card(
+      Card.TYPE_VIDEO,
       Card.TAG_MUSICA,
       "2AppMando%·$%&/()11",
       new Video(
