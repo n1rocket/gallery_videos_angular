@@ -10,6 +10,254 @@ export class Data{
     new Card(
       Card.TYPE_VIDEO,
       Card.TAG_SORPRESA,
+      "PeibolMarmol%100",
+      new Video(
+        'AJbfV_ogyTU',
+        '',
+        'Peibol'
+      )
+    ),
+
+    new Card(
+      Card.TYPE_VIDEO,
+      Card.TAG_MUSICA,
+      "2AppMando%·$%&/()11",
+      new Video(
+        '5xGqUompVVQ',
+        '',
+        'Armando'
+      )
+    ),
+
+    new Card(
+      Card.TYPE_VIDEO,
+      Card.TAG_MUSICA,
+      "2AppMando%·$%&/()11",
+      new Video(
+        'DyDfgMOUjCI',
+        '',
+        'Armando'
+      )
+    ),
+
+    new Card(
+      Card.TYPE_VIDEO,
+      Card.TAG_MUSICA,
+      "2AppMando%·$%&/()11",
+      new Video(
+        'vGJTaP6anOU',
+        '',
+        'Armando'
+      )
+    ),
+
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_RECUERDO,
+      "2AppMando%·$%&/()11",
+      new Asset(
+        'assets/images/festivaleva.jpg',
+        '',
+        'Armando'
+      )
+    ),
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_RECUERDO,
+      "2AppMando%·$%&/()11",
+      new Asset(
+        'assets/images/hack.jpg',
+        'Pichurrines por aquí, pichurrines por allá...',
+        'Armando'
+      )
+    ),
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_RECUERDO,
+      "2AppMando%·$%&/()11",
+      new Asset(
+        'assets/images/lilo.jpg',
+        'LILO & Stitch.',
+        'Armando'
+      )
+    ),
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_RECUERDO,
+      "2AppMando%·$%&/()11",
+      new Asset(
+        'assets/images/stop-covid.jpg',
+        'Stop COVID, please.',
+        'Armando'
+      )
+    ),
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_RECUERDO,
+      "2AppMando%·$%&/()11",
+      new Asset(
+        'assets/images/aleman.jpg',
+        'Alemanes en Canarias ❤️',
+        'Armando'
+      )
+    ),
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_RECUERDO,
+      "2AppMando%·$%&/()11",
+      new Asset(
+        'assets/images/meditation.jpg',
+        '',
+        'Armando'
+      )
+    ),
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_RECUERDO,
+      "2AppMando%·$%&/()11",
+      new Asset(
+        'assets/images/yvonne_first.jpg',
+        'Conociendo a Yvonne, la sorpresa que llegó a tu vida 🎉',
+        'Armando'
+      )
+    ),
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_RECUERDO,
+      "2AppMando%·$%&/()11",
+      new Asset(
+        'assets/images/palma.jpg',
+        'Como la experiencia del barco 👀, ninguna.',
+        'Armando'
+      )
+    ),
+    new Card(
+      Card.TYPE_VIDEO,
+      Card.TAG_MUSICA,
+      "2AppMando%·$%&/()11",
+      new Video(
+        'h_D3VFfhvs4',
+        'Michael Jackson - ¡Minnie es un chiwaka, Minnie es un chiwaka, un chiwaka MINNIE!',
+        'Armando'
+      )
+    ),
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_RECUERDO,
+      "2AppMando%·$%&/()11",
+      new Asset(
+        'assets/images/motera.jpg',
+        'Motera y guerrera.',
+        'Armando'
+      )
+    ),
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_RECUERDO,
+      "2AppMando%·$%&/()11",
+      new Asset(
+        'assets/images/gomera_2.jpg',
+        'No está mal el lugar, pero la chica está preciosa.',
+        'Armando'
+      )
+    ),
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_RECUERDO,
+      "2AppMando%·$%&/()11",
+      new Asset(
+        'assets/images/gomera_1.jpg',
+        'Que vuelvan las vacaciones...',
+        'Armando'
+      )
+    ),
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_RECUERDO,
+      "2AppMando%·$%&/()11",
+      new Asset(
+        'assets/images/selva.jpg',
+        'Oculta entre la selva, espera acechante...',
+        'Armando'
+      )
+    ),
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_RECUERDO,
+      "2AppMando%·$%&/()11",
+      new Asset(
+        'assets/images/especial.jpg',
+        'ES-PE-CIAL',
+        'Armando'
+      )
+    ),
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_RECUERDO,
+      "2AppMando%·$%&/()11",
+      new Asset(
+        'assets/images/eva_camino.jpg',
+        '',
+        'Armando'
+      )
+    ),
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_RECUERDO,
+      "2AppMando%·$%&/()11",
+      new Asset(
+        'assets/images/eva_animales.jpg',
+        'Tienes un don con los animales. Mi teoría es sencilla, ellos sienten la bondad que hay dentro de tí, la misma bondad que hace que tengas a muchas personas bonitas en tu vida. ¡Como animal intentaría no separarme de tí en la vida! ',
+        'Armando'
+      )
+    ),
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_RECUERDO,
+      "2AppMando%·$%&/()11",
+      new Asset(
+        'assets/images/eva_skate.jpg',
+        'Tu parte más innovadora quiere aprender, tu parte más calmada quiere seguridad, pero tu parte más loca quiere probar.',
+        'Armando'
+      )
+    ),
+
+    new Card(
+      Card.TYPE_VIDEO,
+      Card.TAG_MUSICA,
+      "2AppMando%·$%&/()11",
+      new Video(
+        'Qtb11P1FWnc',
+        '',
+        'Armando'
+      )
+    ),
+
+    new Card(
+      Card.TYPE_AUDIO,
+      Card.TAG_MUSICA,
+      "2AppMando%·$%&/()11",
+      new Asset(
+        'assets/songs/black-eyed-peas-shakira-girl-like-me-audio.mp3',
+        'Black Eyed Peas',
+        'Armando'
+      )
+    ),
+
+    new Card(
+      Card.TYPE_VIDEO,
+      Card.TAG_HUMOR,
+      "2AppMando%·$%&/()11",
+      new Video(
+        'BBVlgO7oXus',
+        'El mejor meme del COVID-19 para tí 😘',
+        'Armando'
+      )
+    ),
+
+    new Card(
+      Card.TYPE_VIDEO,
+      Card.TAG_SORPRESA,
       "CanaryIslands(<3)",
       new Video(
         'BBVlgO7oXus',
