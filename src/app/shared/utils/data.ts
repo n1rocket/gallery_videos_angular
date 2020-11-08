@@ -6,7 +6,26 @@ import { Video } from '../models/video.model';
 export class Data{
 
   static initialItems: Card[] = [
-
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_SORPRESA,
+      "(1)Carmen//*1",
+      new Asset(
+        '',
+        'Holaa Eva!! Te acuerdas de mi?? Jejeje. Soy Carmen y he de decir que si no hubieses sido tú mi tutora de prácticas habría sido muuuuy diferente. Pero hiciste que pasará unos meses geniales y me enseñaste muuchas cosas, así que te doy las gracias. No sólo hiciste que mis prácticas fueran geniales, te conocí a ti, y esos poquitos meses contigo me hicieron conocerte un poquito y la verdad es que eres una persona maravillosa, llena de alegría, locura, amor y suuuper divertida. Así que un besazo y muchiiiisimas felicidades 💗💗',
+        'Carmen'
+      )
+    ),
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_SORPRESA,
+      "()Mario//333",
+      new Asset(
+        '',
+        'Muchas felicidades Eva!! Espero que disfrutes mucho de tu día y de esta gran sorpresa que te han preparado ya que es un año atípico al menos te saquen una sonrisa !! Que cumplas muchos más!! Un beso y abrazo !!😘😘',
+        'Mario'
+      )
+    ),
     new Card(
       Card.TYPE_VIDEO,
       Card.TAG_SORPRESA,
@@ -377,7 +396,7 @@ export class Data{
         'Lauris'
       )
     ),
-    
+
 
     new Card(
       Card.TYPE_PHOTO,
@@ -400,7 +419,7 @@ export class Data{
         'Idy'
       )
     ),
-    
+
     new Card(
       Card.TYPE_PHOTO,
       Card.TAG_HUMOR,
