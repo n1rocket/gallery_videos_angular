@@ -13,7 +13,7 @@ export class Data{
       Card.TAG_HUMOR,
       "C.Jhoan#Becario",
       new Asset(
-        'assets/audio/evalajefa.jpeg',
+        'assets/images/evalajefa.jpeg',
         '',
         'Jhoan'
       )
@@ -24,7 +24,7 @@ export class Data{
       Card.TAG_SORPRESA,
       "C.Jhoan#Becario",
       new Asset(
-        'assets/audio/jhoan.ogg',
+        'assets/audios/jhoan.ogg',
         '',
         'Jhoan'
       )
