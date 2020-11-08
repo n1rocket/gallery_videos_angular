@@ -6,7 +6,16 @@ import { Video } from '../models/video.model';
 export class Data{
 
   static initialItems: Card[] = [
-
+    new Card(
+      Card.TYPE_AUDIO,
+      Card.TAG_SORPRESA,
+      "Daniela...LaPrincesa!",
+      new Asset(
+        'assets/audios/daniela.mp4',
+        '',
+        'Daniela'
+      )
+    ),
 
     new Card(
       Card.TYPE_PHOTO,
