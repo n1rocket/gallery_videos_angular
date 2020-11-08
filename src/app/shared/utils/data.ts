@@ -6,6 +6,71 @@ import { Video } from '../models/video.model';
 export class Data{
 
   static initialItems: Card[] = [
+
+
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_HUMOR,
+      "C.Jhoan#Becario",
+      new Asset(
+        'assets/audio/evalajefa.jpeg',
+        '',
+        'Jhoan'
+      )
+    ),
+
+    new Card(
+      Card.TYPE_AUDIO,
+      Card.TAG_SORPRESA,
+      "C.Jhoan#Becario",
+      new Asset(
+        'assets/audio/jhoan.ogg',
+        '',
+        'Jhoan'
+      )
+    ),
+
+    new Card(
+      Card.TYPE_VIDEO,
+      Card.TAG_SORPRESA,
+      "JavisInDaHouse100%Real",
+      new Video(
+        '',
+        '',
+        'Javis'
+      )
+    ),
+    new Card(
+      Card.TYPE_VIDEO,
+      Card.TAG_SORPRESA,
+      "Velas&ScarletForEver2020$",
+      new Video(
+        '',
+        '',
+        'Jorge'
+      )
+    ),
+    new Card(
+      Card.TYPE_VIDEO,
+      Card.TAG_SORPRESA,
+      "-Aida/bonita-",
+      new Video(
+        '',
+        '',
+        'Aída'
+      )
+    ),
+
+    new Card(
+      Card.TYPE_VIDEO,
+      Card.TAG_SORPRESA,
+      "MiguelPlaya%11¿?",
+      new Video(
+        '',
+        '',
+        'Miguel'
+      )
+    ),
     new Card(
       Card.TYPE_PHOTO,
       Card.TAG_SORPRESA,
