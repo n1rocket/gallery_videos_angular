@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit {
     }else if(form.value.code == this.generalCode){
       items_unlocked = Data.initialItems
     }else{
-      items_unlocked = Data.initialItems.filter(card => 
+      items_unlocked = Data.initialItems.filter(card =>
         {
           console.log("------------ " )
           console.log("------------> " + form.value.code)
@@ -56,15 +56,15 @@ export class HomeComponent implements OnInit {
           console.log("------------ " )
 
           return card.password == form.value.code;
-        } 
+        }
         )
     }
 
     this.error = items_unlocked.length == 0
     this.success = items_unlocked.length > 0
 
-    this.items = items_unlocked
-    this.initialItems = items_unlocked
+    this.items = this.shuffle(items_unlocked)
+    this.initialItems = this.shuffle(items_unlocked)
     this.itemsEnabled = []
 
     this.showRoulette = this.success;
@@ -89,4 +89,13 @@ export class HomeComponent implements OnInit {
 
     this.itemsEnabled.unshift(card);
   }
+
+  shuffle(list) {
+    return list.reduce((p, n) => {
+      const size = p.length;
+      const index = Math.trunc(Math.random() * (size - 1));
+      p.splice(index, 0, n);
+      return p;
+    }, []);
+  };
 }

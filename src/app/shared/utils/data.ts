@@ -7,6 +7,16 @@ export class Data{
 
   static initialItems: Card[] = [
     new Card(
+      Card.TYPE_VIDEO,
+      Card.TAG_SORPRESA,
+      "María===guapa!",
+      new Video(
+        '',
+        '',
+        'María'
+      )
+    ),
+    new Card(
       Card.TYPE_AUDIO,
       Card.TAG_SORPRESA,
       "Daniela...LaPrincesa!",
@@ -160,7 +170,7 @@ export class Data{
       Card.TAG_RECUERDO,
       "2AppMando%·$%&/()11",
       new Asset(
-        'assets/images/festivaleva.jpg',
+        'assets/images/festivaleva.jpeg',
         '',
         'Armando'
       )
@@ -344,17 +354,6 @@ export class Data{
       new Asset(
         'assets/songs/black-eyed-peas-shakira-girl-like-me-audio.mp3',
         'Black Eyed Peas',
-        'Armando'
-      )
-    ),
-
-    new Card(
-      Card.TYPE_VIDEO,
-      Card.TAG_HUMOR,
-      "2AppMando%·$%&/()11",
-      new Video(
-        'BBVlgO7oXus',
-        'El mejor meme del COVID-19 para tí 😘',
         'Armando'
       )
     ),
