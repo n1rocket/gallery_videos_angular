@@ -7,6 +7,52 @@ export class Data{
 
   static initialItems: Card[] = [
     new Card(
+      Card.TYPE_CHALLENGE_VIDEO,
+      Card.TAG_RETO,
+      "JulitoJulito=ayuuura",
+      new Challenge(
+        'VideoDeAyura',
+        "¿Cuando un amigo esta en apuros que hay que prestarle? (1 palabra todo minúsculas)",
+        'ayuda',
+        false,
+        false,
+        "Julito"
+      )
+    ),
+    new Card(
+      Card.TYPE_CHALLENGE_VIDEO,
+      Card.TAG_RETO,
+      "JulitoJulito=ayuuura",
+      new Challenge(
+        'VideoDeConcierto',
+        "¿Quien es el mejor amigo de Pitingo al cual todavía le queda mucho para llegar a la suela de los zapatos de la gran cantante que aparecerá en el video? (2 palabras primera letra en mayúsculas)",
+        'Roger Waters',
+        false,
+        false,
+        "Julito"
+      )
+    ),
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_RECUERDO,
+      "JulitoJulito=ayuuura",
+      new Asset(
+        'assets/images/julitotrofeo.jpeg',
+        'Porque se pueden ganar muchos premios pero uno de los mas grandes es haberte conocido ❤️❤️',
+        'Julito'
+      )
+    ),
+    new Card(
+      Card.TYPE_PHOTO,
+      Card.TAG_RECUERDO,
+      "JulitoJulito=ayuuura",
+      new Asset(
+        'assets/images/julitoboikot.jpeg',
+        'Menos mal que tuvimos suerte y no nos encontramos con Ivan Ferreiro',
+        'Julito'
+      )
+    ),
+    new Card(
       Card.TYPE_VIDEO,
       Card.TAG_SORPRESA,
       "María===guapa!",
