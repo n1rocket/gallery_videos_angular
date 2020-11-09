@@ -11,7 +11,7 @@ export class Data{
       Card.TAG_RETO,
       "JulitoJulito=ayuuura",
       new Challenge(
-        'VideoDeAyura',
+        'NAVhPiD7tKs',
         "¿Cuando un amigo esta en apuros que hay que prestarle? (1 palabra todo minúsculas)",
         'ayuda',
         false,
@@ -24,7 +24,7 @@ export class Data{
       Card.TAG_RETO,
       "JulitoJulito=ayuuura",
       new Challenge(
-        'VideoDeConcierto',
+        'xnYCY0ph5Fg',
         "¿Quien es el mejor amigo de Pitingo al cual todavía le queda mucho para llegar a la suela de los zapatos de la gran cantante que aparecerá en el video? (2 palabras primera letra en mayúsculas)",
         'Roger Waters',
         false,
@@ -57,7 +57,7 @@ export class Data{
       Card.TAG_SORPRESA,
       "María===guapa!",
       new Video(
-        '',
+        'SsotlV0OwD8',
         '',
         'María'
       )
@@ -100,7 +100,7 @@ export class Data{
       Card.TAG_SORPRESA,
       "JavisInDaHouse100%Real",
       new Video(
-        '',
+        'ZOhlazE8_3Q',
         '',
         'Javis'
       )
@@ -110,7 +110,7 @@ export class Data{
       Card.TAG_SORPRESA,
       "Velas&ScarletForEver2020$",
       new Video(
-        '',
+        'gQ3Xvq_F3-k',
         '',
         'Jorge'
       )
@@ -120,7 +120,7 @@ export class Data{
       Card.TAG_SORPRESA,
       "-Aida/bonita-",
       new Video(
-        '',
+        'hTPGdV1CM7s',
         '',
         'Aída'
       )
@@ -131,7 +131,7 @@ export class Data{
       Card.TAG_SORPRESA,
       "MiguelPlaya%11¿?",
       new Video(
-        '',
+        'zuXjSYqkUfU',
         '',
         'Miguel'
       )
