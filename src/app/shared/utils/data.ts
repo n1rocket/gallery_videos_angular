@@ -7,6 +7,16 @@ export class Data{
 
   static initialItems: Card[] = [
     new Card(
+      Card.TYPE_VIDEO,
+      Card.TAG_SORPRESA,
+      "MaríaBirthdayEva!",
+      new Video(
+        '9k_xfYEZpvc',
+        '',
+        'María'
+      )
+    ),
+    new Card(
       Card.TYPE_CHALLENGE_VIDEO,
       Card.TAG_RETO,
       "JulitoJulito=ayuuura",
